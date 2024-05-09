@@ -2,32 +2,326 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body{
+    background-color: #0f172a;
+}
+.header{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    background-color: #020617;
+}
+.headerframe{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    min-height: 70px;
+}
+.reglog{
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.email{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+}
+.emailframe{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.emailframe form{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.emailframe form input{
+    min-width: 900px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.emailframe form textarea{
+    min-width: 900px;
+    min-height: 200px;
+    padding: 10px;
+    border-radius: 2px;
+}
+.welcomesign{
+    font-size: 24px;
+    max-width: 400px;
+}
+label{
+    width: 100%;
+    text-align: start;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.mails{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #020617;
+    padding: 20px;
+}
+.mailsframe{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+
+}
+.mailinfo{
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+   gap: 55px;
+}
+.text{
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.success{
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+    color: rgb(58, 232, 58);
+}
+.notsucess{
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+    color: rgb(232, 58, 58);
+}
+.notsendmail{
+  min-width: 700px;
+}
+.cred{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.purcashe{
+    border: 1px solid white;
+    width: 23px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+
+}
+.amount{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.credit{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.creditframe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+.creditframe input{
+    padding: 10px;
+width: 500px;
+}
+.creditframe div{
+
+    gap: 15px;
+    display: flex;
+}
+.creditframe button{
+    min-width: 1020px;
+}
+.paytittle{
+    font-size: 20px;
+}
+.cards{
+    padding: 3px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.cards a{
+
+
+   margin-bottom: 5px;
+   background-color: white;
+   width: 100%;
+   height: 60px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: black;
+}
+.dateer{
+    max-width: 157px !important;
+}
+.loading{
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: fixed;
+}
+.loadingframe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loadinger{
+    width: 200px;
+    height: 20px;
+    overflow: hidden;
+  border: 1px solid white;
+
+}
+.white{
+    background-color: white;
+    width: 200px;
+    height: 20px;
+}
+.mail{
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+.mailframe{
+    width: 70%;
+    display: flex;
+
+    justify-content: center;
+}
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+    height: 50px;
+    width: 90%;
+
+}
+.maillister{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    padding: 20px;
+
+}
+.mastercardbuy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: #0f172a3d;
+
+
+
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.credshop{
+    background-color: white;
+    padding: 10px;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.credshop button{
+    width: 250px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.credshop input{
+    display: flex;
+    align-items: center;
+    background-color: #0f172a;
+    text-align: white;
+    width: 350px;
+    justify-content: center;
+    padding: 10px;
+}
+.cardexit{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+
+}
+.done{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.succ{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.howitworks{
+    width: 100%;
+margin-bottom: 120px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.email{
+    margin-bottom: 200px;
+}
+.header{
+    position: fixed;
+}
+.creditframe{
+ margin-top: 240px;
 }
