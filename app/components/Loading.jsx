@@ -1,6 +1,6 @@
 import React from 'react'
 import {motion} from 'framer-motion'
-import { Scale } from 'phaser'
+
 
 export default function Loading() {
   return (
