@@ -52,13 +52,13 @@ body{
 
 }
 .emailframe form input{
-    min-width: 900px;
+    width: 900px;
     padding: 10px;
     border-radius: 5px;
 }
 .emailframe form textarea{
-    min-width: 900px;
-    min-height: 200px;
+    width: 900px;
+height: 200px;
     padding: 10px;
     border-radius: 2px;
 }
@@ -163,7 +163,7 @@ width: 500px;
     display: flex;
 }
 .creditframe button{
-    min-width: 1020px;
+   width: 1020px;
 }
 .paytittle{
     font-size: 20px;
@@ -181,7 +181,7 @@ width: 500px;
 
    margin-bottom: 5px;
    background-color: white;
-   width: 100%;
+   width: 1000px;
    height: 60px;
    display: flex;
    align-items: center;
@@ -189,7 +189,7 @@ width: 500px;
    color: black;
 }
 .dateer{
-    max-width: 157px !important;
+    width: 157px !important;
 }
 .loading{
     width: 100%;
@@ -324,4 +324,104 @@ margin-bottom: 120px;
 }
 .creditframe{
  margin-top: 240px;
+}
+
+
+
+@media (max-width:1400px) {
+    
+     .cards a{
+        width: 730px;
+     }
+     .creditframe div{
+        width: 730px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     .fourline{
+        display: flex;
+
+        flex-wrap: wrap;
+     }
+     .dates{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+     }
+     .dateer{
+        width: 730px !important;
+     }
+     .dates input{
+        width: 500px !important;
+     }
+
+
+     .paybtn{
+        width: 600px !important ;
+     }
+     .creditframe div{
+        flex-wrap: wrap;
+     }
+     .dateer input{
+        max-width: 730px !important;
+     }
+   }
+   
+@media (max-width:900px) {
+ .emailframe form input{
+
+    width: 330px;
+ }
+ .emailframe form label{
+
+    width: 100%;
+ }
+ .emailframe form textarea{
+
+    width: 100%;
+ }
+
+ .cards a{
+    width: 330px;
+ }
+ .dates input{
+    width: 330px !important;
+ }
+
+ .creditframe div{
+    width: 330px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .creditframe input{
+    width: 330px;
+ }
+ .fourline{
+    display: flex;
+
+    flex-wrap: wrap;
+ }
+ .dates{
+    display: flex;
+    align-items: center;
+
+ }
+ .dates input{
+    width: 100% ;
+ }
+
+
+ .paybtn{
+    width: 330px !important;
+ }
+ .creditframe div{
+    flex-wrap: wrap;
+ }
+ .dateer input{
+    max-width: 330px !important;
+ }
 }

@@ -154,7 +154,7 @@ if(!isSignedIn || !isLoaded){
 
         </div>
 
-        <button onClick={() => gadaxda()} class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+        <button onClick={() => gadaxda()} class="paybtn bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
   გადაიხადე {buyedcredits } ლ
 </button>
  
