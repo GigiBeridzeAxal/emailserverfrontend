@@ -1,0 +1,979 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: white;
+}
+.header{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    backdrop-filter: blur(55px);
+
+    border-bottom: 1px solid rgb(230, 230, 230);
+
+
+}
+.headerframe{
+    width: 73%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    min-height: 70px;
+}
+
+.reglog{
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.email{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+}
+.emailframe{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.emailframe form{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.emailframe form input{
+    width: 900px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.emailframe form textarea{
+    width: 900px;
+height: 200px;
+    padding: 10px;
+    border-radius: 2px;
+}
+.welcomesign{
+    font-size: 24px;
+    max-width: 400px;
+}
+label{
+    width: 100%;
+    text-align: start;
+
+}
+
+.mails{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #020617;
+    padding: 20px;
+}
+.mailsframe{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+
+}
+.mailinfo{
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+   gap: 55px;
+}
+.text{
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.success{
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+    color: rgb(58, 232, 58);
+}
+.notsucess{
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+    color: rgb(232, 58, 58);
+}
+.notsendmail{
+  min-width: 700px;
+}
+.cred{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.purcashe{
+    border: 1px solid #64748b;
+    width: 23px;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+
+}
+.amount{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.credit{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.creditframe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+}
+.creditframe input{
+    padding: 10px;
+width: 500px;
+}
+.creditframe div{
+
+    gap: 15px;
+    display: flex;
+}
+.creditframe button{
+   width: 1020px;
+}
+.paytittle{
+    font-size: 20px;
+}
+.cards{
+    padding: 3px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.cards a{
+
+
+   margin-bottom: 5px;
+   background-color: white;
+   width: 1000px;
+   height: 60px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: black;
+}
+.dateer{
+    width: 157px !important;
+}
+.loading{
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: fixed;
+}
+.loadingframe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loadinger{
+    width: 200px;
+    height: 20px;
+    overflow: hidden;
+  border: 1px solid white;
+
+}
+.white{
+    background-color: white;
+    width: 200px;
+    height: 20px;
+}
+.mail{
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+.mailframe{
+    width: 70%;
+    display: flex;
+
+    justify-content: center;
+}
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+    height: 50px;
+    width: 90%;
+
+}
+.maillister{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    padding: 20px;
+
+}
+.mastercardbuy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: #0f172a3d;
+
+
+
+}
+
+.credshop{
+    background-color: white;
+    padding: 10px;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.credshop button{
+    width: 250px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.credshop input{
+    display: flex;
+    align-items: center;
+    background-color: #0f172a;
+    text-align: white;
+    width: 350px;
+    justify-content: center;
+    padding: 10px;
+}
+.cardexit{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+
+}
+.done{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.succ{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.howitworks{
+    width: 100%;
+margin-bottom: 120px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+.email{
+    margin-bottom: 200px;
+}
+.header{
+    position: fixed;
+}
+.creditframe{
+ margin-top: 240px;
+}
+.creditloader{
+    width: 100px;
+    height: 20px;
+    border-radius: 15px ;
+    background-color: rgb(237, 237, 237); 
+    animation: Loader 1s infinite linear;
+}
+.imageloader{
+    width: 60px;
+    height: 60px;
+    background-color: #111424;
+    animation: Loader 1s infinite linear;
+    border-radius: 50%;
+}
+
+.welcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    padding-top: 80px;
+}
+.welcomeframe{
+    width:73%;
+    display: flex;
+
+    height: 670px;
+
+    gap: 10px;
+
+
+    
+}
+
+
+.bg{
+    position: absolute;
+    z-index: -5;
+    left: 0px;
+    width: 1920px;
+    height: 1080px;
+
+}
+
+body{
+    overflow-x: hidden;
+}
+.videofixer{
+    display: block;
+    position: relative;
+}
+.signbuttons a{
+    padding: 10px;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    
+}
+.signinbtn{
+    border: 1px solid white;
+    color: white;
+    border-radius: 2px;
+}
+.signupbtn{
+    background-color: #4f46e5;
+    color: white;
+    border-radius: 2px;
+    border: 1px solid #4f46e5;
+}
+.videobar{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+.signedsend{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    color: white;
+}
+.notsignedsend{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    color: white;
+
+}
+
+
+@keyframes Video {
+    0%{
+        width:  100%;
+    }
+    100%{
+        width:  80%;
+    }
+    
+    
+}
+.welcometittle{
+    font-size: 24px;
+    color: white;
+}
+.welcometittle2{
+    font-size: 19px;
+    color: white;
+}
+
+.emailsender{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 144px;
+}
+.emailsenderframe{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.emailsenderform{
+    width: 50%;
+}
+.emailsender label{
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #273272;
+}
+.emailsender label .star{
+    color: red;
+}
+.emailsenderframe {
+    background-color: #fff;
+    padding: 10px;
+    width: 70%;
+
+    
+}
+.senderinfo{
+    background-color: #ebebeb;
+    height: 450px;
+    width: 550px;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.emailsenderform input{
+    width: 100%;
+    padding: 15px;
+    background-color: #eff0f1;
+    border: 1px solid #dddee0;
+    border-radius: 5px;
+}
+.emailsenderform textarea{
+    width: 100%;
+    padding: 15px;
+    height: 150px;
+    background-color: #eff0f1;
+    border: 1px solid #dddee0;
+
+}
+.emailsenderform button{
+    padding: 10px;
+     width: 100%;
+     background-color: #0ea5e9;
+     display: flex;
+     color: white;
+     text-align: center;
+     justify-content: center;
+     align-items: center;
+     gap: 5px;
+}
+.lime{
+        text-decoration: underline;
+    color: #14b8a6;
+}
+.MainLabel{
+    letter-spacing: 1.5px;
+    font-size: 30px;
+    display: flex;
+    font-weight: 800;
+    gap: 15px;
+    margin-bottom: 20px;
+
+}
+
+
+.emailsenderframe{
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+.MainLabel{
+    width: 70%;
+}
+.emailsender{
+    flex-direction: column;
+}
+
+.senderinfo{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.attetion{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+}
+.number{
+    font-size: 34px;
+    color: #14b8a6;
+    font-weight: 700;
+}
+.attetion{
+    font-size: 18px; 
+       background-color: rgb(252, 252, 252);
+    padding: 20px;
+    border-radius: 20px;
+    width: 90%;
+}
+.videobarframe{
+    display: flex;
+    width: 73%;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 10px;
+}
+.sendmessage button{
+    border: 1px solid white;
+    padding: 10px;
+}
+.welcomeframe{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.videoframe{
+    border: 25px solid rgb(255, 255, 255);
+    width: fit-content;
+    border-radius: 70px;
+    width: 60%;
+}
+video{
+
+
+
+    width: 100%;
+    border-radius: 50px;
+    animation: Video 0.2s linear ;
+    border: 15px solid #a855f7;
+
+}
+.amount{
+    font-weight: 500;
+}
+.leftwelcome{
+    max-width: 50%;
+    padding: 20px;
+}
+.mainweltittle{
+    font-size: 35px;
+    font-weight: 900;
+    gap: 5px;
+   display: flex;
+   flex-wrap: wrap;
+    
+}
+.mainweldesc{
+   letter-spacing: 1px;
+}
+.leftdown{
+    margin-top: 100px;
+}
+.leftdown a{
+    padding: 15px;
+    color: white;
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    width: 150px;
+    box-shadow: 5px 5px 15px 3px #b0aede;
+
+}
+.techs{
+    margin-top: 25px;
+}
+.welcome{
+    display: flex;
+    flex-direction: column;
+}
+.logo{
+    font-size: 22px;
+    font-weight: 600;
+}
+.trustframe{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+.trusttittle{
+    letter-spacing: 1px;
+}
+.sendmessages{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 700px;
+    gap: 244px;
+    flex-direction: column;
+}
+
+.infoline{
+    width: 700px;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: 3px 3px 15px 3px rgb(204, 204, 204);
+    display:flex;
+    align-items:center;
+    letter-spacing: 1px;
+    color: #273272;
+    justify-content: space-between;
+}
+.firstinfo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+.ball{
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+}
+.completed{
+    color: green;
+    
+}
+.messagesheader{
+
+    left: 32%;
+    top: 15%;
+}
+.sendmessageform input{
+
+    outline: 0.5px;
+    padding: 25px;
+    border: 1px solid rgb(188, 188, 188);
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 3px 3px 15px 3px rgb(204, 204, 204);
+    width: 750px;
+    
+
+
+}
+.sendmessageform {
+    display: flex;
+    flex-direction: column;
+}
+.sendmessageform button{
+    padding: 15px;
+    color: white;
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    width: 150px;
+    box-shadow: 5px 5px 15px 3px #b0aede;
+}
+.msgsubmit{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.sendmessageform label{
+    padding: 10px;
+    letter-spacing: 1px;
+    color: #273272;
+}
+
+.sucessball{
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.messagesuccess{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.messagesuccess button{
+    padding: 10px;
+
+
+}
+.myserver{
+    width: 100%;
+    height: 600px;
+    padding-top: 144px;
+    display: flex;
+    justify-content: center;
+}
+.myserverframe{
+    width: 73%;
+    padding: 10px;
+    align-items: center;
+
+}
+.planinfo{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+.plan{
+    margin-top: 144px;
+    background-color: white;
+
+    box-shadow: 3px 3px 3px 3px rgb(214, 214, 214);
+    width: 400px;
+    border-top-left-radius: 10px;   
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;   
+     border-bottom-right-radius: 10px;
+    padding: 20px;
+}
+.serverbuy{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.planinfo{
+    padding: 10px;
+}
+.plantittle{
+    padding: 10px;
+}
+.price{
+    border-top: 1px solid rgb(227, 227, 227);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+
+}
+.planinfo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price{
+    letter-spacing: 2px;
+    color: #273272;
+}
+
+.servernameinputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.servernameinputs input{
+    border: 1px solid black;
+    padding: 5px;
+
+}
+.servernameinputs button{
+
+    letter-spacing: 1px;
+    width: 60px;
+    padding: 5px;
+    font-weight: 600;
+    color: white;
+
+}
+
+.serverlist{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+.listframe{
+    width: 32.3%;
+    padding: 20px;
+    background-color: rgb(246, 246, 246);
+}
+.planname{
+    gap: 5px;   
+     text-align: end;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.serverlistname{
+    letter-spacing: 1px;
+    color: #273272;
+
+}
+.health{
+
+}
+
+@keyframes Loader {
+    1%{
+        background-color: rgb(245, 245, 245); 
+    }
+    50%{
+        background-color: rgb(226, 226, 226); 
+    }
+    100%{
+        background-color: rgb(219, 219, 219); 
+    }
+}
+
+
+
+@media (max-width:1400px) {
+    
+     .cards a{
+        width: 730px;
+     }
+     .creditframe div{
+        width: 730px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+     .fourline{
+        display: flex;
+
+        flex-wrap: wrap;
+     }
+     .dates{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+     }
+     .dateer{
+        width: 730px !important;
+     }
+     .dates input{
+        width: 500px !important;
+     }
+
+
+     .paybtn{
+        width: 600px !important ;
+     }
+     .creditframe div{
+        flex-wrap: wrap;
+     }
+     .dateer input{
+        max-width: 730px !important;
+     }
+   }
+   
+@media (max-width:900px) {
+ .emailframe form input{
+
+    width: 330px;
+ }
+ .emailframe form label{
+
+    width: 100%;
+ }
+ .emailframe form textarea{
+
+    width: 100%;
+ }
+
+ .cards a{
+    width: 330px;
+ }
+ .dates input{
+    width: 330px !important;
+ }
+
+ .creditframe div{
+    width: 330px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .creditframe input{
+    width: 330px;
+ }
+ .fourline{
+    display: flex;
+
+    flex-wrap: wrap;
+ }
+ .dates{
+    display: flex;
+    align-items: center;
+
+ }
+ .dates input{
+    width: 100% ;
+ }
+
+
+ .paybtn{
+    width: 330px !important;
+ }
+ .creditframe div{
+    flex-wrap: wrap;
+ }
+ .dateer input{
+    max-width: 330px !important;
+ }
+}
