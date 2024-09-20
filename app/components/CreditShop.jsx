@@ -125,39 +125,6 @@ if(!isSignedIn || !isLoaded){
             </div>
 
 
-         {sucess == 'yes' ? <div className="scc flex align-center justify-center text-emerald-500 ">You Succesfuly Buy {buyedcredits} <img src="/Coins.png" width={20} alt="" /> Coin</div> : <div className="swad"></div> }
-
-         <div className="firstline">   <input placeholder='Enter Your Name' className='bg-slate-700' type="text" />
-        <input placeholder='Enter Your Last Name' className='bg-slate-700' type="text" /></div>
-
-        <div className="secondline">
-     
-        <input onChange={(e) => changecreditamount(e)} placeholder='Enter Your Amount Of Credits' className='bg-slate-700' type="text" />
- 
-         <input placeholder='Enter Your Card Id' className='bg-slate-700' type="text" />
-        </div>
-
-        <div className="thirdline">
-        <input placeholder='Enter Country' className='bg-slate-700' type="text" />
-        <input placeholder='Enter City' className='bg-slate-700' type="text" />
-        </div>
-        <div className="fourline">
-        <input placeholder='Enter Street.st' className='bg-slate-700' type="text" />
-
-        <div className="dates">
-
-        <input  placeholder='Enter MM' className='dateer bg-slate-700' type="text" />
-        <input placeholder='Enter DD' className=' dateer bg-slate-700' type="text" />
-        <input placeholder='Enter YY' className='dateer bg-slate-700' type="text" />
-        </div>
-
-
-        </div>
-
-        <button onClick={() => gadaxda()} class="paybtn bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
-  გადაიხადე {buyedcredits } ლ
-</button>
- 
              
         </div>
     </div>

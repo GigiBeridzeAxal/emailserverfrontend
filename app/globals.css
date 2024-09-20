@@ -851,6 +851,10 @@ video{
     padding: 20px;
     background-color: rgb(246, 246, 246);
 }
+.cards a{
+    border: 1px solid whitesmoke;
+    padding: 20px;
+}
 .planname{
     gap: 5px;   
      text-align: end;
@@ -1116,6 +1120,9 @@ video{
 
    }
    @media (max-width:1450px) {
+    .creditframe{
+        margin-top: 144px;
+    }
     .trustframe{
         margin-top: 50px;
         margin-bottom: 50px;
@@ -1141,16 +1148,31 @@ video{
     }
    }
 
-   @media (max-width:1650px) {
+ 
+   @media (max-width:1780px) {
+    .leftdown{
+        margin-top: 70px;
+    }
+    .mainweltittle{
+        font-size: 28px;
+    }
+   }
+   
+     @media (max-width:1650px) {
     .bg{
         display: none;
     }
     .videoframe{
         border: 25px solid whitesmoke;
     }
+    .leftdown{
+        margin-top: 70px;
+    }
+    .mainweltittle{
+        font-size: 24px;
+    }
     
    }
-   
 @media (max-width:980px) {
     .welcomeframe{
         margin-top: 0px;
