@@ -1357,3 +1357,46 @@ video{
     max-width: 330px !important;
  }
 }
+
+@media (max-width:1700px) {
+    .openedserverframe{
+        left: 15%;
+    }
+}
+@media (max-width:1400px) {
+    .openedserverframe{
+        top: 10%;
+        left: 10%;
+    }
+}
+@media (max-width:1300px) {
+    .openedserverframe{
+        top: 10%;
+        left: 3%;
+
+    }
+}
+@media (max-width:580px) {
+
+    .deleteserver{
+        font-size: 10px;
+    }
+    .openedheaderframe{
+        flex-direction: column;
+    }
+    .openedplan{
+        margin: 0;
+    }
+    .openedlimit{
+        margin: 0;
+    }
+    .openedsecure{
+        width: 100%;
+    }
+    .openedserverframe{
+        width: 90%;
+        left: 5%;
+    }
+
+
+}
