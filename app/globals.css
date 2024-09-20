@@ -1117,6 +1117,9 @@ video{
    }
    
 @media (max-width:900px) {
+    .mobilleft a {
+        padding: 10px;
+    }
     .openedheader{
         align-items: center;
         font-size: 15px;
