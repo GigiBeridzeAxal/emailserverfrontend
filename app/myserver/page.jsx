@@ -106,6 +106,20 @@ export default function page() {
 
         }
 
+        const serverlive = (data) => {
+          
+          const send = axios.post('http://localhost:3500/status' , {id:data._id})
+          console.log(send.data)
+
+
+
+        }
+
+        const delteserver = async(data) => {
+
+          const send = axios.post('http://localhost:3500/deleteserver' , {id:data._id})
+          setserveropen(false)
+        }
 
 
 
@@ -118,6 +132,8 @@ export default function page() {
 
 
   
+  {serveropen ? <button onClick={() => setserveropen(false)} className="blurbg"></button> : <div></div>}
+
 
 
     <div className="myserver">
@@ -130,9 +146,35 @@ export default function page() {
 
        <div className="openedserverframe">
 
-        <div className="openedheader"> 
+        <div className="openedheaderframe flex items-center justfy-between"> 
 
-          <div className="openedheader"> <div className="servername">{data.servername}</div> </div>
+          <div className="openedheader flex items-end gap-[10px]"> <div className="servername text-[34px]">{data.servername}</div> <div className="openedplan text-gray-500">Plan:{data.plan}</div> <div className="openedlimit text-gray-500">{data.limit}/{data.plan == 'silver' ?500 : null }{data.plan == 'golden' ?2500 : null }{data.plan == 'emerald' ?7000 : null } </div> </div>
+          <button onClick={() => delteserver(data) } className="deleteserver flex items-center gap-[5px]  justify-center">Delete Server <img src="Remove.png" alt="" /></button>
+        </div>
+        
+        <div className="openedserverstatus">
+
+        <div className="servertittle">Server Status:</div>
+        
+
+        <div className="serverdiv">
+      <button onClick={() => serverlive(data)} className="server">{data.status == true ? <img src="Live.png" alt="" />  :<img src="Shutdown.png" alt="" /> }</button>
+
+        </div>
+  
+
+        </div>
+
+        <div className="openedsecure">
+          <div className="sercuretittle">Server Secure:</div>
+
+          <div className="secure">
+            <div className="apikeytittle">Api Key:</div>
+            <div className="apikey flex items-center"><div className="key"><img src="Key.png" alt="" /></div>  <div className="value">{data._id}</div></div>
+            <div className="apikeytittle">Api Password:</div>
+            <div className="apikey flex items-center"><div className="key"><img src="Key.png" alt="" /></div>  <div className="value">{data.secure}</div></div>
+            
+          </div>
 
         </div>
 

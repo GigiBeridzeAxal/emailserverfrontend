@@ -47,7 +47,7 @@ export default function page() {
       if(userinfo.credits >= 3){
               console.log("sended")
         setdone(4)
-      const send = await axios.post("http://localhost:3500/", {
+      const send = await axios.post("http://localhost:3500/sendmessage", {
         email:email,
         message:message,
         username:username

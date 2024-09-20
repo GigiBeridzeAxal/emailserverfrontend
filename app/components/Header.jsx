@@ -12,6 +12,7 @@ const encrypted = CryptoJS.AES.encrypt(process.env.NEXT_PUBLIC_KEY, process.env.
 
   const {isLoaded, isSignedIn , user} = useUser()
   const [credit , setcredit] = useState('undf')
+  const [mobmenu , setmobmenu] = useState(false)
   
   useEffect(() => { 
 
@@ -47,38 +48,70 @@ const encrypted = CryptoJS.AES.encrypt(process.env.NEXT_PUBLIC_KEY, process.env.
 
 
   return (
+
+    <>
+    {mobmenu == true ? <div className="mobilemenu">
+      <div className="mobilleft flex gap-[15px] items-center">
+
+<a href='/' className="emailserver flex align-center justify-center text-slate-600 ">EMAIL <span className='text-emerald-500' >SERVER</span></a>
+<br /><br />
+<a href='/apidoc' className="emailserver flex align-center justify-center text-slate-600 ">Api Documentation</a>
+<a href='/sendmessages' className="emailserver flex align-center justify-center text-slate-600 ">Send Messages</a>
+<a href='/myserver' className="emailserver flex align-center justify-center text-slate-600 ">My Servers</a>
+
+</div>
+      </div> : null}
+   
+
+      
    <div className="header">
 
-    <div className="headerframe">
+<div className="headerframe">
 
 
-      <div className="left flex gap-[15px] items-center">
+<div className="mobileleft flex items-center gap-[15px]">
+   <button onClick={() => mobmenu == true ? setmobmenu(false) : setmobmenu(true)} className="burger flex items-center  w-[250px]">
+    <img src="menu.png" alt="" />
 
-        <a href='/' className="emailserver flex align-center justify-center text-slate-600 ">EMAIL <span className='text-emerald-500' >SERVER</span></a>
-        <br /><br />
-        <a href='/api' className="emailserver flex align-center justify-center text-slate-600 ">Api Documentation</a>
-        <a href='/sendmessages' className="emailserver flex align-center justify-center text-slate-600 ">Send Messages</a>
-        <a href='/myserver' className="emailserver flex align-center justify-center text-slate-600 ">My Servers</a>
+  </button>
+  {mobmenu == true  ?  
+  <div className="headermenutittle">Header Menu</div>
+ 
 
-      </div>
+ :  <a href='/' className="emailserver flex align-center justify-center text-slate-600 ">EMAIL <span className='text-emerald-500' >SERVER</span></a>}
+</div>
 
 
-      <div className="right flex align-center justify-center gap-5">
-        {isSignedIn ?    <div className="cred flex text-white align-center justify-center gap-2"><img src={'/Coins.png'} width={25} alt="" /> <div className="flex align-center text-slate-600  gap-3 amount">{credit !== 'undf' ? credit : <div className='creditloader'></div>}<a href='/creditshop' className="purcashe">+</a></div></div> : <div className='signbuttons' ><a href='sign-in' className='signinbtn' >Sign In</a> <a href='sign-up' className='signupbtn'>Sign Up</a></div>}
-     
-        {isLoaded == true ? isSignedIn == true  ? <UserButton afterSignOutUrl='/sign-in' ></UserButton> : <div></div> : <div className='imageloader' ></div>}
 
-        
+  <div className="left flex gap-[15px] items-center">
 
-      </div>
+    <a href='/' className="emailserver flex align-center justify-center text-slate-600 ">EMAIL <span className='text-emerald-500' >SERVER</span></a>
+    <br /><br />
+    <a href='/apidoc' className="emailserver flex align-center justify-center text-slate-600 ">Api Documentation</a>
+    <a href='/sendmessages' className="emailserver flex align-center justify-center text-slate-600 ">Send Messages</a>
+    <a href='/myserver' className="emailserver flex align-center justify-center text-slate-600 ">My Servers</a>
 
-     
-     
-     
-     
-          
-    </div>
-   </div>
+  </div>
+
+
+  <div className="right flex align-center justify-center gap-5">
+    {isSignedIn ?    <div className="cred flex text-white align-center justify-center gap-2"><img src={'/Coins.png'} width={25} alt="" /> <div className="flex align-center text-slate-600  gap-3 amount">{credit !== 'undf' ? credit : <div className='creditloader'></div>}<a href='/creditshop' className="purcashe">+</a></div></div> : <div className='signbuttons' ><a href='sign-in' className='signinbtn' >Sign In</a> <a href='sign-up' className='signupbtn'>Sign Up</a></div>}
+ 
+    {isLoaded == true ? isSignedIn == true  ? <UserButton afterSignOutUrl='/sign-in' ></UserButton> : <div></div> : <div className='imageloader' ></div>}
+
+    
+
+  </div>
+
+ 
+ 
+ 
+ 
+      
+</div>
+</div>
+    </>
+    
   )
 }
 
