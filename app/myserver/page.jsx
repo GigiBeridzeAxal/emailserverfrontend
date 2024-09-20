@@ -32,7 +32,7 @@ export default function page() {
         const serverfind = async() => {
 
   
-          const get = await axios.post('http://localhost:3500/getserver' , {owner:user.id})
+          const get = await axios.post('https://emailserverbackend.onrender.com/getserver' , {owner:user.id})
 
           setservers(get.data)
         }
@@ -53,7 +53,7 @@ export default function page() {
 
           }else{
 
-            const create = await axios.post('http://localhost:3500/createserver' , {
+            const create = await axios.post('https://emailserverbackend.onrender.com/createserver' , {
               owner:user.id,
               plan:'silver',
               servername:servername,
@@ -74,7 +74,7 @@ export default function page() {
                     }else{
 
                           
-          const create = await axios.post('http://localhost:3500/createserver' , {
+          const create = await axios.post('https://emailserverbackend.onrender.com/createserver' , {
             owner:user.id,
             plan:'golden',
             servername:servername,
@@ -91,7 +91,7 @@ export default function page() {
             setserverlimit(true)  
      
                     }else{
-                      const create = await axios.post('http://localhost:3500/createserver' , {
+                      const create = await axios.post('https://emailserverbackend.onrender.com/createserver' , {
                         owner:user.id,
                         plan:'emerald',
                         servername:servername,
@@ -108,7 +108,7 @@ export default function page() {
 
         const serverlive = (data) => {
           
-          const send = axios.post('http://localhost:3500/status' , {id:data._id})
+          const send = axios.post('https://emailserverbackend.onrender.com/status' , {id:data._id})
           console.log(send.data)
 
 
@@ -117,7 +117,7 @@ export default function page() {
 
         const delteserver = async(data) => {
 
-          const send = axios.post('http://localhost:3500/deleteserver' , {id:data._id})
+          const send = axios.post('https://emailserverbackend.onrender.com/deleteserver' , {id:data._id})
           setserveropen(false)
         }
 
