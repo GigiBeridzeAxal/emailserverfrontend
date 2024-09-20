@@ -47,12 +47,12 @@ export default function page() {
       if(userinfo.credits >= 3){
               console.log("sended")
         setdone(4)
-      const send = await axios.post("http://localhost:3500/sendmessage", {
+      const send = await axios.post("https://emailserverbackend.onrender.com/sendmessage", {
         email:email,
         message:message,
         username:username
       })
-      const payment = await axios.patch('http://localhost:3500/' , {userid:user.id} )
+      const payment = await axios.patch('https://emailserverbackend.onrender.com/' , {userid:user.id} )
 
 
       }else{
