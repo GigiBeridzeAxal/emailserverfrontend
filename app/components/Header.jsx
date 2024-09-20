@@ -54,7 +54,7 @@ const encrypted = CryptoJS.AES.encrypt(process.env.NEXT_PUBLIC_KEY, process.env.
       <div className="mobilleft flex gap-[15px] items-center">
 
 <a href='/' className="emailserver flex align-center justify-center text-slate-600 ">EMAIL <span className='text-emerald-500' >SERVER</span></a>
-<br /><br />
+
 <a href='/apidoc' className="emailserver flex align-center justify-center text-slate-600 ">Api Documentation</a>
 <a href='/sendmessages' className="emailserver flex align-center justify-center text-slate-600 ">Send Messages</a>
 <a href='/myserver' className="emailserver flex align-center justify-center text-slate-600 ">My Servers</a>
