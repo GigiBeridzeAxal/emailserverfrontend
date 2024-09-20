@@ -1115,8 +1115,57 @@ video{
 
 
    }
+   @media (max-width:1450px) {
+    .trustframe{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .videoframe{
+        width: 100%;
+        height: fit-content;
+
+    }
+    .welcomeframe{
+        margin-top: 330px;
+        flex-direction: column-reverse;
+
+
+    }
+    .leftwelcome{
+        max-width: 100%;
+
+
+    }
+    .mainweltittle{
+        font-size: 30px;
+    }
+   }
+
+   @media (max-width:1650px) {
+    .bg{
+        display: none;
+    }
+    .videoframe{
+        border: 25px solid whitesmoke;
+    }
+    
+   }
    
-@media (max-width:900px) {
+@media (max-width:980px) {
+    .welcomeframe{
+        margin-top: 0px;
+        flex-direction: column-reverse;
+
+
+    }
+    .videoframe{
+        width: 50%;
+        height: fit-content;
+
+    }
+    .serversinfo .value{
+        display: none;
+    }
     .mobilleft a {
         padding: 10px;
     }
