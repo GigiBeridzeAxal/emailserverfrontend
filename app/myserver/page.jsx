@@ -8,7 +8,7 @@ export default function page() {
          
   
     const {isLoaded , isSignedIn , user} = useUser()
-    const [servers, setservers] = useState(['loading'])
+    const [servers, setservers] = useState('')
     const [emeraldopen, setemeraldopen] = useState(false)
     const [goldeonopen, setgoldeonopen] = useState(false)
     const [silveropen, setsilveropen] = useState(false)
@@ -189,7 +189,7 @@ export default function page() {
 
         <div className="serversinfo flex items-center gap-[10px]">My Servers <div className="value flex items-center gap-[7px] text-[20px] ">{servers == '' ? 0 : servers.length}<div className="dash text-black text-[25px]">/</div> <div className="max text-red-500">9</div></div></div>
 
-        {servers.length > 0 ? 
+        {servers !== '' ? 
         
         <div className="serverlist">
 
@@ -210,7 +210,7 @@ export default function page() {
 
         </div>
         
-        : <div></div>}
+        : null}
 
             
 
