@@ -13,6 +13,9 @@ export const metadata = {
 
 if(env === 'production'){
   console.log= function(){}
+  console.warn= function(){}
+  console.debug= function(){}
+  console.error= function(){}
 }
 
 export default function RootLayout({ children }) {
