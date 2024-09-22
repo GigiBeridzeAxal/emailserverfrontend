@@ -28,7 +28,7 @@ export default function page() {
     useEffect(() => {
       const getcoins = async() => {
         if(isLoaded){
-        const data = await axios.post("https://emailserverbackend.onrender.com/",  {userid: user.id})
+        const data = await axios.post("https://emailserverbackend.onrender.com/",  {userid: user.id , bcrypted:encrypted})
         setuserinfo(data.data)
         }
 
@@ -50,9 +50,10 @@ export default function page() {
       const send = await axios.post("https://emailserverbackend.onrender.com/sendmessage", {
         email:email,
         message:message,
-        username:username
+        username:username,
+        bcrypted:encrypted
       })
-      const payment = await axios.patch('https://emailserverbackend.onrender.com/' , {userid:user.id} )
+      const payment = await axios.patch('https://emailserverbackend.onrender.com/' , {userid:user.id , bcrypted:encrypted} )
 
 
       }else{

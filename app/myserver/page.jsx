@@ -16,7 +16,7 @@ export default function page() {
     const [serverlimit , setserverlimit] = useState(false)
     const [openedserver , setopenedserver] = useState('')
     const [serveropen , setserveropen] = useState(false)
-
+    const encrypted = CryptoJS.AES.encrypt(process.env.NEXT_PUBLIC_KEY, process.env.NEXT_PUBLIC_SECRETKEY).toString()
 
     
     
@@ -32,7 +32,7 @@ export default function page() {
         const serverfind = async() => {
 
   
-          const get = await axios.post('https://emailserverbackend.onrender.com/getserver' , {owner:user.id})
+          const get = await axios.post('http://localhost:3500/getserver' , {owner:user.id , bcrypted:encrypted })
 
           setservers(get.data)
         }
@@ -53,10 +53,11 @@ export default function page() {
 
           }else{
 
-            const create = await axios.post('https://emailserverbackend.onrender.com/createserver' , {
+            const create = await axios.post('http://localhost:3500/createserver' , {
               owner:user.id,
               plan:'silver',
               servername:servername,
+              bcrypted:encrypted
   
   
             })
@@ -78,6 +79,7 @@ export default function page() {
             owner:user.id,
             plan:'golden',
             servername:servername,
+            bcrypted:encrypted
 
           })
                     }
@@ -95,6 +97,7 @@ export default function page() {
                         owner:user.id,
                         plan:'emerald',
                         servername:servername,
+                        bcrypted:encrypted
             
             
                       })
@@ -108,7 +111,7 @@ export default function page() {
 
         const serverlive = (data) => {
           
-          const send = axios.post('https://emailserverbackend.onrender.com/status' , {id:data._id})
+          const send = axios.post('https://emailserverbackend.onrender.com/status' , {id:data._id , bcrypted:encrypted})
           console.log(send.data)
 
 
@@ -117,7 +120,7 @@ export default function page() {
 
         const delteserver = async(data) => {
 
-          const send = axios.post('https://emailserverbackend.onrender.com/deleteserver' , {id:data._id})
+          const send = axios.post('https://emailserverbackend.onrender.com/deleteserver' , {id:data._id , bcrypted:encrypted})
           setserveropen(false)
         }
 

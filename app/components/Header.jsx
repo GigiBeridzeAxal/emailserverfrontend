@@ -7,7 +7,7 @@ import CryptoJS from 'crypto-js'
 
 
 export default function Header() {
-const encrypted = CryptoJS.AES.encrypt(process.env.NEXT_PUBLIC_KEY, process.env.NEXT_PUBLIC_SECRETKEY) 
+const encrypted = CryptoJS.AES.encrypt(process.env.NEXT_PUBLIC_KEY, process.env.NEXT_PUBLIC_SECRETKEY).toString()
 
 
   const {isLoaded, isSignedIn , user} = useUser()
@@ -24,7 +24,7 @@ const encrypted = CryptoJS.AES.encrypt(process.env.NEXT_PUBLIC_KEY, process.env.
         
 
 
-       const data = await axios.post(process.env.NEXT_PUBLIC_BACKENDSERVER,  {userid: user.id , Key: encrypted.toString() })
+       const data = await axios.post(process.env.NEXT_PUBLIC_BACKENDSERVER,  {userid: user.id , bcrypted: encrypted })
 
 
       setcredit(data.data.credits)
@@ -95,7 +95,7 @@ const encrypted = CryptoJS.AES.encrypt(process.env.NEXT_PUBLIC_KEY, process.env.
 
 
   <div className="right flex align-center justify-center gap-5">
-    {isSignedIn ?    <div className="cred flex text-white align-center justify-center gap-2"><img src={'/Coins.png'} width={25} alt="" /> <div className="flex align-center text-slate-600  gap-3 amount">{credit !== 'undf' ? credit : <div className='creditloader'></div>}<a href='/creditshop' className="purcashe">+</a></div></div> : <div className='signbuttons' ><a href='sign-in' className='signinbtn' >Sign In</a> <a href='sign-up' className='signupbtn'>Sign Up</a></div>}
+    {isSignedIn ?    <div className="cred flex text-white align-center justify-center gap-2"><img src={'/Coins.png'} width={25} alt="" /> <div className="flex align-center text-slate-600  gap-3 amount">{credit !== 'undf' ? credit : <div className='creditloader'></div>}<a href='/creditshop' className="purcashe">+</a></div></div> : <div className='signbuttons' > <a href='sign-up' className='signupbtn'>Sign Up</a></div>}
  
     {isLoaded == true ? isSignedIn == true  ? <UserButton afterSignOutUrl='/sign-in' ></UserButton> : <div></div> : <div className='imageloader' ></div>}
 
