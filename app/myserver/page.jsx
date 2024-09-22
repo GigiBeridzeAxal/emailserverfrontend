@@ -32,7 +32,7 @@ export default function page() {
         const serverfind = async() => {
 
   
-          const get = await axios.post('http://localhost:3500/getserver' , {owner:user.id , bcrypted:encrypted })
+          const get = await axios.post('https://emailserverbackend.onrender.com/getserver' , {owner:user.id , bcrypted:encrypted })
 
           setservers(get.data)
         }
@@ -53,7 +53,7 @@ export default function page() {
 
           }else{
 
-            const create = await axios.post('http://localhost:3500/createserver' , {
+            const create = await axios.post('https://emailserverbackend.onrender.com/createserver' , {
               owner:user.id,
               plan:'silver',
               servername:servername,
