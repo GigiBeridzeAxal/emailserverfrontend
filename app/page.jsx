@@ -16,10 +16,7 @@ export default function Home() {
   
   const {isSignedIn, isLoaded, user} = useUser()
 
-  if (process.env.NODE_ENV === 'production') {
-    console.error = () => {}; // Suppress all console.error messages
-    console.warn = () => {}; // Optionally suppress warnings too
-}
+
   if(!isLoaded){
     return <ClerkLoading></ClerkLoading>
   }else{
