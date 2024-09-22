@@ -18,6 +18,8 @@ export default function page() {
     const [serverlimit , setserverlimit] = useState(false)
     const [openedserver , setopenedserver] = useState('')
     const [serveropen , setserveropen] = useState(false)
+    const [userinfo , setuserinfo] = useState()
+    const [noteunghcoins , setnghcoins] = useState(false)
   
 
     
@@ -27,8 +29,14 @@ export default function page() {
      }else{
 
 
-     
+      const getcoins = async() => {
+   
+        const data = await axios.post("http://localhost:3500/",  {userid: user.id , bcrypted:encrypted})
+        setuserinfo(data.data)
 
+
+      }
+      getcoins()
 
 
         const serverfind = async() => {
@@ -54,7 +62,7 @@ export default function page() {
             setserverlimit(true)
 
           }else{
-
+            if(userinfo.credits > 500){
             const create = await axios.post('https://emailserverbackend.onrender.com/createserver' , {
               owner:user.id,
               plan:'silver',
@@ -64,7 +72,13 @@ export default function page() {
   
             })
   
+          }else{
+            setnghcoins(true)
+            setTimeout(() => {
+              setnghcoins(false)
+            }, 2500);
           }
+        }
         
         }
         const goldenplan = async() => {
@@ -75,6 +89,9 @@ export default function page() {
 
           
                     }else{
+                      if(userinfo.credits >1000){
+
+                      
 
                           
           const create = await axios.post('https://emailserverbackend.onrender.com/createserver' , {
@@ -84,10 +101,15 @@ export default function page() {
             bcrypted:encrypted
 
           })
+                    }else{
+                      setnghcoins(true)
+                      setTimeout(() => {
+                        setnghcoins(false)
+                      }, 2500);
                     }
                   
 
-
+}
         }
         const emeraldplan = async() => {
 
@@ -95,6 +117,7 @@ export default function page() {
             setserverlimit(true)  
      
                     }else{
+                      if(userinfo.credits >1000){
                       const create = await axios.post('https://emailserverbackend.onrender.com/createserver' , {
                         owner:user.id,
                         plan:'emerald',
@@ -104,7 +127,13 @@ export default function page() {
             
                       })
 
+                    }else{
+                      setnghcoins(true)
+                      setTimeout(() => {
+                        setnghcoins(false)
+                      }, 2500);
                     }
+                  }
                   
 
  
@@ -142,8 +171,9 @@ export default function page() {
 
 
     <div className="myserver">
-        <div className="myserverframe">
 
+        <div className="myserverframe">
+    {noteunghcoins == true ? <div className="notenough w-[100%] flex items-center justify-center text-red-500">თქვენ არ გაქვთ საკმარისი ქოინები</div> : null}
         {
       serveropen == true ? 
       
@@ -192,7 +222,7 @@ export default function page() {
       : <div></div>
     }
 
-        <div className="serversinfo flex items-center gap-[10px]">My Servers <div className="value flex items-center gap-[7px] text-[20px] ">{servers == '' ? 0 : servers.length}<div className="dash text-black text-[25px]">/</div> <div className="max text-red-500">9</div></div></div>
+        <div className="serversinfo flex items-center gap-[10px]"><div className="value flex items-center  text-[20px] ">{servers == '' ? 0 : servers.length}<div className="dash text-black text-[25px]">/</div> <div className="max text-red-500">9</div></div></div>
 
         {servers !== '' ? 
         
@@ -221,6 +251,7 @@ export default function page() {
 
 
           <div className="serverbuy">
+    
 
             <div className="plan">
 

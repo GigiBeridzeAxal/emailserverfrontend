@@ -22,17 +22,18 @@ export default function page() {
     const [usernamefield,setusernamefield] = useState()
     const [messagefield,setmessagefield] = useState()
     const [userinfo , setuserinfo] = useState()
+    const [notenoughcoins , setencoins] = useState(false)
 
 
-
-    useEffect(() => {
-      const getcoins = async() => {
+const getcoins = async() => {
         if(isLoaded){
-        const data = await axios.post("https://emailserverbackend.onrender.com/",  {userid: user.id , bcrypted:encrypted})
+        const data = await axios.post("http://localhost:3500/",  {userid: user.id , bcrypted:encrypted})
         setuserinfo(data.data)
         }
 
       }
+    useEffect(() => {
+      getcoins()
 
         setInterval(() => {
          getcoins()
@@ -58,6 +59,11 @@ export default function page() {
 
 
       }else{
+        setencoins(true)
+
+        setTimeout(() => {
+          setencoins(false)
+        }, 4500);
 
       }
 
@@ -80,9 +86,13 @@ export default function page() {
 
     }
 
-
+   if(userinfo == undefined){
+    return null
+   }
   return (
     <>
+
+
 
 
 
@@ -131,7 +141,12 @@ export default function page() {
 
 {done == 3 ?      <form onSubmit={(e) => sendmessage(e)} className='sendmessageform' >
   
-
+{
+  notenoughcoins == true ? <div className="text-red-500">
+  თქვენ არ გაქვთ საკმარისი რაოდენობის ქოინები
+  </div>
+   : null
+}
 <label htmlFor="">შეიყვანე შეტყობინება</label>
             <input onChange={(e) => setmessage(e.target.value)} required type="text" placeholder='გამარჯობა როგორ ბრძანდებით' />
             <br />
@@ -152,7 +167,7 @@ export default function page() {
 <button onClick={() => window.location = '/'} className='bg-blue-500 text-white'>დადასტურება</button>
 
 </div>
-: <div></div>}
+:null}
 
         </div>
     </div>

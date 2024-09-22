@@ -13,14 +13,7 @@ const encrypted = CryptoJS.AES.encrypt(process.env.NEXT_PUBLIC_KEY, process.env.
   const {isLoaded, isSignedIn , user} = useUser()
   const [credit , setcredit] = useState('undf')
   const [mobmenu , setmobmenu] = useState(false)
-  
-  useEffect(() => { 
-
-    if(isSignedIn){
-       
-    setInterval(() => {
-      
-       const getdata = async() => {
+    const getdata = async() => {
         
 
 
@@ -29,6 +22,14 @@ const encrypted = CryptoJS.AES.encrypt(process.env.NEXT_PUBLIC_KEY, process.env.
 
       setcredit(data.data.credits)
     }
+  useEffect(() => { 
+
+    if(isSignedIn){
+     getdata()
+       
+    setInterval(() => {
+      
+     
     getdata()
     }, 2000);
     }
