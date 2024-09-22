@@ -21,9 +21,6 @@ export default function Home() {
     return <ClerkLoading></ClerkLoading>
   }else{
 
-    useEffect(() => {
-      console.log("Hello world")
-    },[])
 
 
   return (

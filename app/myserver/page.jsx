@@ -31,7 +31,7 @@ export default function page() {
 
       const getcoins = async() => {
    
-        const data = await axios.post("http://localhost:3500/",  {userid: user.id , bcrypted:encrypted})
+        const data = await axios.post("https://emailserverbackend.onrender.com/",  {userid: user.id , bcrypted:encrypted})
         setuserinfo(data.data)
 
 
