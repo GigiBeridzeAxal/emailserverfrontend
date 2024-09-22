@@ -51,7 +51,8 @@ export default function page() {
         email:email,
         message:message,
         username:username,
-        bcrypted:encrypted
+        bcrypted:encrypted,
+        userid: user.id
       })
       const payment = await axios.patch('https://emailserverbackend.onrender.com/' , {userid:user.id , bcrypted:encrypted} )
 
