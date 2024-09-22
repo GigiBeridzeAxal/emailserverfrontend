@@ -3,9 +3,11 @@ import React, { useEffect, useState } from 'react'
 import Header from '../components/Header'
 import { useUser } from '@clerk/nextjs'
 import axios from 'axios'
+import CryptoJS from 'crypto-js'
 export default function page() {
+  
 
-         
+  const encrypted = CryptoJS.AES.encrypt(process.env.NEXT_PUBLIC_KEY, process.env.NEXT_PUBLIC_SECRETKEY).toString()
   
     const {isLoaded , isSignedIn , user} = useUser()
     const [servers, setservers] = useState('')
@@ -16,7 +18,7 @@ export default function page() {
     const [serverlimit , setserverlimit] = useState(false)
     const [openedserver , setopenedserver] = useState('')
     const [serveropen , setserveropen] = useState(false)
-    const encrypted = CryptoJS.AES.encrypt(process.env.NEXT_PUBLIC_KEY, process.env.NEXT_PUBLIC_SECRETKEY).toString()
+  
 
     
     

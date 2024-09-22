@@ -9,7 +9,7 @@ import CryptoJS from 'crypto-js'
 
 export default function page() {
 
-
+  const encrypted = CryptoJS.AES.encrypt(process.env.NEXT_PUBLIC_KEY, process.env.NEXT_PUBLIC_SECRETKEY).toString()
   const {isSignedIn, isLoaded, user} = useUser()
 
 
