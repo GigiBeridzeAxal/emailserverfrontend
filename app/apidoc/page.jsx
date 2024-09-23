@@ -35,9 +35,11 @@ export default function page() {
              მარტივი სტრუქტურა React-ის ფრეიმვორკზე
           </div>
           <img src="form.PNG" alt="" />
+          <br /><br />
           <div className="servermaketittle">
              Api-ს გაგზავნა სერვერზე
           </div>
+     
           <img src="form2.PNG" alt="" />
           <br />
         </div>

@@ -21,7 +21,7 @@ export default function Welcome() {
           </div>
 
           <div className="leftdown">
-            <a className='bg-indigo-500' >Start Now</a>
+            <a href='/sendmessages' className='bg-indigo-500' >Start Now</a>
             <br />
             <div className="techs text-slate-600 flex items-center gap-[15px]"><div className="nodemailer flex items-center gap-[3px]"><img width={30} src="Nodemailer.png" alt="" />Nodemailer</div> <div className="react flex items-center gap-[1px]"><img width={30} src="React.png" alt="" /> React </div> <div className="gmail flex items-center gap-[2px]"><img width={30} src="Gmail.png" alt="" />Gmail</div></div>
           </div>

@@ -24,6 +24,7 @@ export default function page() {
     const [userinfo , setuserinfo] = useState()
     const [notenoughcoins , setencoins] = useState(false)
 
+    
 
 const getcoins = async() => {
         if(isLoaded){

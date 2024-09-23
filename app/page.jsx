@@ -22,7 +22,6 @@ export default function Home() {
   }else{
 
 
-
   return (
    <>
 <Header></Header>
