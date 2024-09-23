@@ -13,12 +13,12 @@ export default function CreditShop() {
     const [gadaxdili , setgadaxdili] = useState('und')
     const [sucess, setsucess] = useState()
     
-    const encrypted = CryptoJS.AES.encrypt(process.env.NEXT_PUBLIC_KEY, process.env.NEXT_PUBLIC_SECRETKEY).toString() 
+    const encrypted = CryptoJS.AES.encrypt(process.env.NEXT_PUBLIC_KEY, process.env.NEXT_PUBLIC_SECRETKEY).toString()
 
 
     const gadaxda = async() => {
 
-      const gadaxdaprocess = await axios.post(process.env.NEXT_PUBLIC_PAYSERVER, {userid:user.id,buyedcredits, bcrypted:encrypted})
+      const gadaxdaprocess = await axios.post("http://localhost:3500/pay", {userid:user.id,buyedcredits, bcrypted:encrypted})
   
       if(gadaxdaprocess){
         setsucess('yes')
@@ -67,11 +67,14 @@ if(!isSignedIn || !isLoaded){
 }else{
 
   return (
+   <>
    
-    <div className="credit text-white">
-       {mastercard == true ? <div className="mastercardbuy  text-white">
+   {mastercard == true ?<a onClick={() => setmastercard(false)} className='cardexit' ></a>          : null}
+    
+      <div className="credit text-white">
+       {mastercard == true ? 
 
-   <a onClick={() => setmastercard(false)} className='cardexit' ></a>
+
 <div className="credshop text-black">
 
   {gadaxdili == 'yes' ? <>
@@ -95,7 +98,7 @@ if(!isSignedIn || !isLoaded){
  
 </div>
 
-</div> : <div></div>}
+ : <div></div>}
         <div className="creditframe">
 
             
@@ -127,7 +130,11 @@ if(!isSignedIn || !isLoaded){
 
              
         </div>
-    </div>
+        </div>
+
+   </>
+   
+    
   )
 }
 }
