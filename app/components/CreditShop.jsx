@@ -18,7 +18,7 @@ export default function CreditShop() {
 
     const gadaxda = async() => {
 
-      const gadaxdaprocess = await axios.post("http://localhost:3500/pay", {userid:user.id,buyedcredits, bcrypted:encrypted})
+      const gadaxdaprocess = await axios.post(process.env.NEXT_PUBLIC_PAYSERVER, {userid:user.id,buyedcredits, bcrypted:encrypted})
   
       if(gadaxdaprocess){
         setsucess('yes')
